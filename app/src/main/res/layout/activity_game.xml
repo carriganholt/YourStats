@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="-87dp"
+            tools:layout_editor_absoluteY="59dp">
+
+            <TextView
+                android:id="@+id/gameTwoPointersMadeShow"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="0"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                app:layout_constraintBottom_toTopOf="@+id/gameTwoPointersMissedLabel"
+                app:layout_constraintEnd_toStartOf="@+id/gameTwoPointersMadePlus"
+                app:layout_constraintStart_toEndOf="@+id/gameTwoPointersMadeMinus" />
+
+            <TextView
+                android:id="@+id/gameTwoPointersMadeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Two Pointers Made"
+                app:layout_constraintBottom_toTopOf="@+id/gameTwoPointersMadeShow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/gameTwoPointersMadePlus"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="21dp"
+                android:text="+"
+                app:layout_constraintBottom_toTopOf="@+id/gameTwoPointersMissedPlus"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <Button
+                android:id="@+id/gameTwoPointersMadeMinus"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="20dp"
+                android:text="-"
+                app:layout_constraintBottom_toTopOf="@+id/gameTwoPointersMissedMinus"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/endGame"
+                android:layout_width="0dp"
+                android:layout_height="75dp"
+                android:text="End game"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/blockShow"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="12dp"
+                android:gravity="center"
+                android:text="0"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                app:layout_constraintBottom_toTopOf="@+id/endGame"
+                app:layout_constraintEnd_toStartOf="@+id/blockPlus"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/blockMinus" />
+
+            <Button
+                android:id="@+id/blockPlus"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="12dp"
+                android:text="+"
+                app:layout_constraintBottom_toTopOf="@+id/endGame"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <Button
+                android:id="@+id/blockMinus"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="12dp"
+                android:text="-"
+                app:layout_constraintBottom_toTopOf="@+id/endGame"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/blockLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Blocks"
+                app:layout_constraintBottom_toTopOf="@+id/blockShow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/stealShow"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="0"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                app:layout_constraintBottom_toTopOf="@+id/blockLabel"
+                app:layout_constraintEnd_toStartOf="@+id/stealPlus"
+                app:layout_constraintStart_toEndOf="@+id/stealMinus" />
+
+            <Button
+                android:id="@+id/stealPlus"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="19dp"
+                android:text="+"
+                app:layout_constraintBottom_toTopOf="@+id/blockPlus"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <Button
+                android:id="@+id/stealMinus"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="19dp"
+                android:text="-"
+                app:layout_constraintBottom_toTopOf="@+id/blockMinus"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/stealLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Steals"
+                app:layout_constraintBottom_toTopOf="@+id/stealShow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/assistShow"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="0"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                app:layout_constraintBottom_toTopOf="@+id/stealLabel"
+                app:layout_constraintEnd_toStartOf="@+id/assistPlus"
+                app:layout_constraintStart_toEndOf="@+id/assistMinus" />
+
+            <TextView
+                android:id="@+id/assistLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Assists"
+                app:layout_constraintBottom_toTopOf="@+id/assistShow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/reboundShow"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="0"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                app:layout_constraintBottom_toTopOf="@+id/assistLabel"
+                app:layout_constraintEnd_toStartOf="@+id/reboundPlus"
+                app:layout_constraintStart_toEndOf="@+id/reboundMinus" />
+
+            <TextView
+                android:id="@+id/reboundLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rebounds"
+                app:layout_constraintBottom_toTopOf="@+id/reboundShow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/gameFreeThrowsMissedShow"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="0"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                app:layout_constraintBottom_toTopOf="@+id/reboundLabel"
+                app:layout_constraintEnd_toStartOf="@+id/gameFreeThrowsMissedPlus"
+                app:layout_constraintStart_toEndOf="@+id/gameFreeThrowsMissedMinus" />
+
+            <TextView
+                android:id="@+id/gameFreeThrowsMissedLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Free Throws Missed"
+                app:layout_constraintBottom_toTopOf="@+id/gameFreeThrowsMissedShow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/gameFreeThrowsMadeShow"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="0"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                app:layout_constraintBottom_toTopOf="@+id/gameFreeThrowsMissedLabel"
+                app:layout_constraintEnd_toStartOf="@+id/gameFreeThrowsMadePlus"
+                app:layout_constraintStart_toEndOf="@+id/gameFreeThrowsMadeMinus" />
+
+            <TextView
+                android:id="@+id/gameFreeThrowsMadeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Free Throws Made"
+                app:layout_constraintBottom_toTopOf="@+id/gameFreeThrowsMadeShow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/gameThreePointersMissedShow"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="0"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                app:layout_constraintBottom_toTopOf="@+id/gameFreeThrowsMadeLabel"
+                app:layout_constraintEnd_toStartOf="@+id/gameThreePointersMissedPlus"
+                app:layout_constraintStart_toEndOf="@+id/gameThreePointersMissedMinus" />
+
+            <TextView
+                android:id="@+id/gameThreePointersMadeShow"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="0"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                app:layout_constraintBottom_toTopOf="@+id/gameThreePointersMissedLabel"
+                app:layout_constraintEnd_toStartOf="@+id/gameThreePointersMadePlus"
+                app:layout_constraintStart_toEndOf="@+id/gameThreePointersMadeMinus" />
+
+            <TextView
+                android:id="@+id/gameThreePointersMissedLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Three Pointers Missed"
+                app:layout_constraintBottom_toTopOf="@+id/gameThreePointersMissedShow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/gameThreePointersMadeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Three Pointers Made"
+                app:layout_constraintBottom_toTopOf="@+id/gameThreePointersMadeShow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/gameTwoPointersMissedShow"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="0"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                app:layout_constraintBottom_toTopOf="@+id/gameThreePointersMadeLabel"
+                app:layout_constraintEnd_toStartOf="@+id/gameTwoPointersMissedPlus"
+                app:layout_constraintStart_toEndOf="@+id/gameTwoPointersMissedMinus" />
+
+            <TextView
+                android:id="@+id/gameTwoPointersMissedLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Two Pointers Missed"
+                app:layout_constraintBottom_toTopOf="@+id/gameTwoPointersMissedShow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/assistPlus"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="20dp"
+                android:text="+"
+                app:layout_constraintBottom_toTopOf="@+id/stealPlus"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <Button
+                android:id="@+id/reboundPlus"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="19dp"
+                android:text="+"
+                app:layout_constraintBottom_toTopOf="@+id/assistPlus"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <Button
+                android:id="@+id/gameFreeThrowsMissedPlus"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="20dp"
+                android:text="+"
+                app:layout_constraintBottom_toTopOf="@+id/reboundPlus"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <Button
+                android:id="@+id/gameFreeThrowsMadePlus"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="19dp"
+                android:text="+"
+                app:layout_constraintBottom_toTopOf="@+id/gameFreeThrowsMissedPlus"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <Button
+                android:id="@+id/gameThreePointersMissedPlus"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="19dp"
+                android:text="+"
+                app:layout_constraintBottom_toTopOf="@+id/gameFreeThrowsMadePlus"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <Button
+                android:id="@+id/gameThreePointersMadePlus"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="20dp"
+                android:text="+"
+                app:layout_constraintBottom_toTopOf="@+id/gameThreePointersMissedPlus"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <Button
+                android:id="@+id/gameTwoPointersMissedPlus"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="18dp"
+                android:text="+"
+                app:layout_constraintBottom_toTopOf="@+id/gameThreePointersMadePlus"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <Button
+                android:id="@+id/assistMinus"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="20dp"
+                android:text="-"
+                app:layout_constraintBottom_toTopOf="@+id/stealMinus"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/reboundMinus"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="19dp"
+                android:text="-"
+                app:layout_constraintBottom_toTopOf="@+id/assistMinus"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/gameFreeThrowsMissedMinus"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="19dp"
+                android:text="-"
+                app:layout_constraintBottom_toTopOf="@+id/reboundMinus"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/gameFreeThrowsMadeMinus"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="20dp"
+                android:text="-"
+                app:layout_constraintBottom_toTopOf="@+id/gameFreeThrowsMissedMinus"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/gameThreePointersMissedMinus"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="20dp"
+                android:text="-"
+                app:layout_constraintBottom_toTopOf="@+id/gameFreeThrowsMadeMinus"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/gameThreePointersMadeMinus"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="19dp"
+                android:text="-"
+                app:layout_constraintBottom_toTopOf="@+id/gameThreePointersMissedMinus"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/gameTwoPointersMissedMinus"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="19dp"
+                android:text="-"
+                app:layout_constraintBottom_toTopOf="@+id/gameThreePointersMadeMinus"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
